@@ -1,0 +1,35 @@
+/************************************************************
+************************************************************/
+■Unity シーン間で変数を共有する方法
+	https://qiita.com/YuwUnknown/items/afdc9cd01de7c559ba60
+	
+	/********************
+	********************/
+	public class MainGameController : MonoBehaviour {
+		public static int hitpoint = 0;
+	
+		// getter
+		public static int getHitPoint() {
+			return hitpoint;
+		}
+	
+		void Start () {
+		}
+	
+		void Update () {
+		}
+	}
+
+
+	/********************
+	********************/
+	public class ResultController : MonoBehaviour {
+		void Start () {
+			int resultHitpoint = MainGameController.getHitPoint()
+		}
+	
+		void Update () {
+		}
+	}
+	
+	
